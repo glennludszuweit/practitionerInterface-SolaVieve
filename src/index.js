@@ -6,7 +6,7 @@ import { Store } from './store';
 import App from './App';
 
 ReactDOM.render(
-  <BrowserRouter basename='/glued/'>
+  <BrowserRouter>
     <Provider store={Store}>
       <App />
     </Provider>
