@@ -1,17 +1,21 @@
 import { makeStyles } from '@material-ui/core/styles';
 
 export const useStyles = makeStyles((theme) => ({
-  root: {
-    flexGrow: 1,
-    marginTop: -35,
+  paper: {
+    margin: '10px 0 20px 0',
+    height: 350,
+    '& a': {
+      color: '#212121',
+      textDecoration: 'none',
+    },
   },
-  pageTopButtons: {
+  header: {
+    padding: '15px 30px',
     display: 'flex',
     justifyContent: 'space-between',
     alignItems: 'center',
   },
-  paper: {
+  menu: {
     padding: theme.spacing(2),
-    margin: '10px 0 20px 0',
   },
 }));
