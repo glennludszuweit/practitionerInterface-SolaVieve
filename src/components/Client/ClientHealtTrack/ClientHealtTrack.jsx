@@ -134,8 +134,12 @@ function ClientHealthTrack() {
               </TableBody>
             </Table>
           </TableContainer>
-          <div className={classes.readmoreButton}>
-            <Button variant='contained' color='default'>
+          <div className={classes.readmoreButtonContainer}>
+            <Button
+              className={classes.readmoreButton}
+              variant='contained'
+              color='primary'
+            >
               Read more
             </Button>
           </div>

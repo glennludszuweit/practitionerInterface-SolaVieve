@@ -24,7 +24,7 @@ export const useStyles = makeStyles((theme) => ({
     position: 'relative',
     borderLeft: `1px solid ${theme.palette.divider}`,
   },
-  readmoreButton: {
+  readmoreButtonContainer: {
     // '& button': { color: '#fff' },
     position: 'absolute',
     marginLeft: 'auto',
@@ -36,6 +36,9 @@ export const useStyles = makeStyles((theme) => ({
     backgroundColor: 'rgba(255,255,255, 0.95)',
     padding: '20px 0',
     textAlign: 'center',
+  },
+  readmoreButton: {
+    color: '#fff',
   },
   infoChartSection: {
     padding: 20,

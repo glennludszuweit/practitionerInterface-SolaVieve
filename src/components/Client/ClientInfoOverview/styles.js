@@ -5,7 +5,7 @@ export const useStyles = makeStyles((theme) => ({
     margin: '10px 0 20px 0',
     height: 350,
     '& a': {
-      color: '#212121',
+      color: '#11C4B0',
       textDecoration: 'none',
     },
   },
