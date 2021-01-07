@@ -1,12 +1,10 @@
-import { useStyles, bootstrapInput } from './styles';
+import { useStyles } from './styles';
 import {
   Button,
   Divider,
   FormControl,
-  InputBase,
   InputLabel,
   MenuItem,
-  NativeSelect,
   Paper,
   Select,
 } from '@material-ui/core';
@@ -14,11 +12,10 @@ import { useState } from 'react';
 
 function ClientLifestylePresc() {
   const classes = useStyles();
-
-  const [age, setAge] = useState('');
+  const [select, setSelect] = useState('');
 
   const handleChange = (event) => {
-    setAge(event.target.value);
+    setSelect(event.target.value);
   };
 
   return (
@@ -32,28 +29,111 @@ function ClientLifestylePresc() {
         </div>
       </div>
       <Divider />
-      <FormControl className={classes.margin}>
-        <InputLabel htmlFor='demo-customized-select-native'>Age</InputLabel>
-        <NativeSelect
-          id='demo-customized-select-native'
-          value={age}
-          onChange={handleChange}
-          input={<bootstrapInput />}
+
+      <div className={classes.dropdownContainer}>
+        <FormControl
+          size='small'
+          variant='outlined'
+          className={classes.formControl}
         >
-          <option aria-label='None' value='' />
-          <option value={10}>Ten</option>
-          <option value={20}>Twenty</option>
-          <option value={30}>Thirty</option>
-        </NativeSelect>
-      </FormControl>
-      <Button
-        size='small'
-        variant='contained'
-        color='primary'
-        className={classes.submitButton}
-      >
-        save
-      </Button>
+          <InputLabel id='demo-simple-select-outlined-label'>
+            Dimension
+          </InputLabel>
+          <Select
+            labelId='demo-simple-select-outlined-label'
+            id='demo-simple-select-outlined'
+            value={select}
+            onChange={handleChange}
+            label='Dimension'
+          >
+            <MenuItem value=''>
+              <em>None</em>
+            </MenuItem>
+            <MenuItem value={10}>Ten</MenuItem>
+            <MenuItem value={20}>Twenty</MenuItem>
+            <MenuItem value={30}>Thirty</MenuItem>
+          </Select>
+        </FormControl>
+
+        <FormControl
+          size='small'
+          variant='outlined'
+          className={classes.formControl}
+        >
+          <InputLabel id='demo-simple-select-outlined-label'>Aspect</InputLabel>
+          <Select
+            labelId='demo-simple-select-outlined-label'
+            id='demo-simple-select-outlined'
+            value={select}
+            onChange={handleChange}
+            label='Aspect'
+          >
+            <MenuItem value=''>
+              <em>None</em>
+            </MenuItem>
+            <MenuItem value={10}>Ten</MenuItem>
+            <MenuItem value={20}>Twenty</MenuItem>
+            <MenuItem value={30}>Thirty</MenuItem>
+          </Select>
+        </FormControl>
+
+        <FormControl
+          size='small'
+          variant='outlined'
+          className={classes.formControl}
+        >
+          <InputLabel id='demo-simple-select-outlined-label'>
+            Prescription
+          </InputLabel>
+          <Select
+            labelId='demo-simple-select-outlined-label'
+            id='demo-simple-select-outlined'
+            value={select}
+            onChange={handleChange}
+            label='Prescription'
+          >
+            <MenuItem value=''>
+              <em>None</em>
+            </MenuItem>
+            <MenuItem value={10}>Ten</MenuItem>
+            <MenuItem value={20}>Twenty</MenuItem>
+            <MenuItem value={30}>Thirty</MenuItem>
+          </Select>
+        </FormControl>
+
+        <FormControl
+          size='small'
+          variant='outlined'
+          className={classes.formControl}
+        >
+          <InputLabel id='demo-simple-select-outlined-label'>
+            Frequency
+          </InputLabel>
+          <Select
+            labelId='demo-simple-select-outlined-label'
+            id='demo-simple-select-outlined'
+            value={select}
+            onChange={handleChange}
+            label='Frequency'
+          >
+            <MenuItem value=''>
+              <em>None</em>
+            </MenuItem>
+            <MenuItem value={10}>Ten</MenuItem>
+            <MenuItem value={20}>Twenty</MenuItem>
+            <MenuItem value={30}>Thirty</MenuItem>
+          </Select>
+        </FormControl>
+
+        <Button
+          size='small'
+          variant='contained'
+          color='primary'
+          className={classes.submitButton}
+        >
+          save
+        </Button>
+      </div>
     </Paper>
   );
 }
