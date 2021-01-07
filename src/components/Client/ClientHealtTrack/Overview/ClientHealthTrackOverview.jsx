@@ -74,7 +74,7 @@ const rows = [
   ),
 ];
 
-function ClientHealthTrack() {
+function ClientHealthTrackOverview() {
   const classes = useStyles();
 
   return (
@@ -149,4 +149,4 @@ function ClientHealthTrack() {
   );
 }
 
-export default ClientHealthTrack;
+export default ClientHealthTrackOverview;
