@@ -23,5 +23,6 @@ export const useStyles = makeStyles((theme) => ({
     position: 'absolute',
     right: 30,
     bottom: 20,
+    color: '#fff',
   },
 }));

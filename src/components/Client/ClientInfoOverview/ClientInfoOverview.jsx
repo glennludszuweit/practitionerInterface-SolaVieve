@@ -10,7 +10,7 @@ function ClientInfoOverview() {
       <div className={classes.header}>
         <div>Information of client</div>
         <div>
-          <Button size='small' variant='outlined' color='default'>
+          <Button size='small' variant='outlined' color='primary'>
             view
           </Button>
         </div>

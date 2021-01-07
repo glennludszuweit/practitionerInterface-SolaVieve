@@ -17,7 +17,8 @@ export const useStyles = makeStyles((theme) => ({
     height: '200px',
   },
   communication: {
-    border: '1px solid #e9e9e9',
+    border: '1px solid #11C4B0',
     margin: 10,
+    color: '#11C4B0',
   },
 }));

@@ -9,7 +9,7 @@ function ClientProgressNotes() {
       <div className={classes.header}>
         <div>Progress notes</div>
         <div>
-          <Button size='small' variant='outlined' color='default'>
+          <Button size='small' variant='outlined' color='primary'>
             history
           </Button>
         </div>
@@ -25,7 +25,7 @@ function ClientProgressNotes() {
       <Button
         size='small'
         variant='contained'
-        color='default'
+        color='primary'
         className={classes.submitButton}
       >
         save
