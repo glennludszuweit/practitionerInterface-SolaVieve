@@ -1,7 +1,7 @@
 import { useStyles } from './styles';
 import { Button, Divider, InputBase, Paper } from '@material-ui/core';
 
-function ClientProgressNotes() {
+function ClientProgressNotesOverview() {
   const classes = useStyles();
 
   return (
@@ -34,4 +34,4 @@ function ClientProgressNotes() {
   );
 }
 
-export default ClientProgressNotes;
+export default ClientProgressNotesOverview;
