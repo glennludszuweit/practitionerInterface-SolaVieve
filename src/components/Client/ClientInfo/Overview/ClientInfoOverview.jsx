@@ -11,7 +11,7 @@ function ClientInfoOverview() {
         <div>Information of client</div>
         <div>
           <Button size='small' variant='outlined' color='primary'>
-            view
+            <Link to='/client/info'>View</Link>
           </Button>
         </div>
       </div>
