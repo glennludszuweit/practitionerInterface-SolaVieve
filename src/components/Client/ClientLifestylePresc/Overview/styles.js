@@ -1,5 +1,4 @@
-import { InputBase } from '@material-ui/core';
-import { makeStyles, withStyles } from '@material-ui/core/styles';
+import { makeStyles } from '@material-ui/core/styles';
 
 export const useStyles = makeStyles((theme) => ({
   paper: {
@@ -19,21 +18,22 @@ export const useStyles = makeStyles((theme) => ({
   inputBase: {
     padding: 20,
   },
+  formContainer: {
+    display: 'flex',
+    justifyContent: 'space-between',
+    alignItems: 'center',
+    margin: '25px 20px',
+  },
   dropdownContainer: {
     display: 'flex',
     justifyContent: 'space-around',
     alignItems: 'center',
-    margin: '25px 20px',
+    flexGrow: 1,
   },
   submitButton: {
     color: '#fff',
     height: 30,
-  },
-  formControl: {
-    margin: theme.spacing(1),
-    width: 150,
-  },
-  selectEmpty: {
-    marginTop: theme.spacing(2),
+    marginLeft: 30,
+    marginRight: 10,
   },
 }));
