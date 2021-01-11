@@ -14,15 +14,17 @@ function Dimension({ dimension, handleDimensionChange, aspect }) {
 
       <Select
         value={
-          aspect === 'Sleep & Rest' ||
-          aspect === 'Movement' ||
-          aspect === 'Sexuality' ||
-          aspect === 'Skin' ||
-          aspect === 'Chronic Disease' ||
-          aspect === 'Genetics' ||
-          aspect === 'Pregnancy' ||
-          aspect === 'Allergies' ||
-          aspect === 'Medical Self-Care'
+          dimension
+            ? dimension
+            : aspect === 'Sleep & Rest' ||
+              aspect === 'Movement' ||
+              aspect === 'Sexuality' ||
+              aspect === 'Skin' ||
+              aspect === 'Chronic Disease' ||
+              aspect === 'Genetics' ||
+              aspect === 'Pregnancy' ||
+              aspect === 'Allergies' ||
+              aspect === 'Medical Self-Care'
             ? 'Physical'
             : aspect === 'Individual Attributes' ||
               aspect === 'Social Circumstances' ||

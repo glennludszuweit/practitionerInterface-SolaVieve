@@ -11,7 +11,7 @@ function ClientInfoOverview() {
         <div>Information of client</div>
         <div>
           <Button size='small' variant='outlined' color='primary'>
-            <Link to='/client/info'>View</Link>
+            <Link to='/client/info/personal-info'>View</Link>
           </Button>
         </div>
       </div>
@@ -19,22 +19,24 @@ function ClientInfoOverview() {
       <div className={classes.menu}>
         <List>
           <ListItem button>
-            <Link to='/'>Personal Information</Link>
+            <Link to='/client/info/personal-info'>Personal Information</Link>
           </ListItem>
           <ListItem button>
-            <Link to='/'>Medical background</Link>
+            <Link to='/client/info/medical-background'>Medical background</Link>
           </ListItem>
           <ListItem button>
-            <Link to='/'>Family medical background</Link>
+            <Link to='/client/info/family-medical-background'>
+              Family medical background
+            </Link>
           </ListItem>
           <ListItem button>
-            <Link to='/'>Lifestyle and habits</Link>
+            <Link to='/client/info/lifestyle-habits'>Lifestyle and habits</Link>
           </ListItem>
           <ListItem button>
-            <Link to='/'>Test results</Link>
+            <Link to='/client/info/allergies'>Test results</Link>
           </ListItem>
           <ListItem button>
-            <Link to='/'>Allergies</Link>
+            <Link to='/client/info/test-results'>Allergies</Link>
           </ListItem>
         </List>
       </div>
