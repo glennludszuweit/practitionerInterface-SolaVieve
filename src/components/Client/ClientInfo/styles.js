@@ -12,7 +12,6 @@ export const useStyles = makeStyles((theme) => ({
     alignItems: 'center',
   },
   paper: {
-    padding: theme.spacing(2),
     margin: '10px 0 20px 0',
     padding: 0,
   },
