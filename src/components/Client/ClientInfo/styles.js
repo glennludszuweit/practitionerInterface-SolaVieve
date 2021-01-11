@@ -31,7 +31,6 @@ export const useStyles = makeStyles((theme) => ({
   },
   tabsLabel: {
     border: '1px solid #e8e8e8',
-    margin: 2,
   },
   tabsContent: {
     height: 800,

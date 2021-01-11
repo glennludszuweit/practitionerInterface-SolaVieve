@@ -1,21 +1,32 @@
 import { useStyles } from './styles';
-import {
-  Button,
-  Divider,
-  FormControl,
-  InputLabel,
-  MenuItem,
-  Paper,
-  Select,
-} from '@material-ui/core';
+import { Button, Divider, Paper } from '@material-ui/core';
 import { useState } from 'react';
+import Dimension from './Dimension/Dimension';
+import Aspect from './Aspect/Aspect';
+import Prescription from './Prescription/Prescription';
+import Frequency from './Frequency/Frequency';
 
 function ClientLifestylePresc() {
   const classes = useStyles();
-  const [select, setSelect] = useState('');
+  const [dimension, setDimension] = useState('');
+  const [aspect, setAspect] = useState('');
+  const [prescription, setPrescription] = useState('');
+  const [frequency, setFrequency] = useState('');
 
-  const handleChange = (event) => {
-    setSelect(event.target.value);
+  const handleDimensionChange = (e) => {
+    setDimension(e.target.value);
+  };
+
+  const handleAspectChange = (e) => {
+    setAspect(e.target.value);
+  };
+
+  const handlePrescriptionChange = (e) => {
+    setPrescription(e.target.value);
+  };
+
+  const handleFrequencyChange = (e) => {
+    setFrequency(e.target.value);
   };
 
   return (
@@ -30,101 +41,24 @@ function ClientLifestylePresc() {
       </div>
       <Divider />
 
-      <div className={classes.dropdownContainer}>
-        <FormControl
-          size='small'
-          variant='outlined'
-          className={classes.formControl}
-        >
-          <InputLabel id='demo-simple-select-outlined-label'>
-            Dimension
-          </InputLabel>
-          <Select
-            labelId='demo-simple-select-outlined-label'
-            id='demo-simple-select-outlined'
-            value={select}
-            onChange={handleChange}
-            label='Dimension'
-          >
-            <MenuItem value=''>
-              <em>None</em>
-            </MenuItem>
-            <MenuItem value={10}>Ten</MenuItem>
-            <MenuItem value={20}>Twenty</MenuItem>
-            <MenuItem value={30}>Thirty</MenuItem>
-          </Select>
-        </FormControl>
-
-        <FormControl
-          size='small'
-          variant='outlined'
-          className={classes.formControl}
-        >
-          <InputLabel id='demo-simple-select-outlined-label'>Aspect</InputLabel>
-          <Select
-            labelId='demo-simple-select-outlined-label'
-            id='demo-simple-select-outlined'
-            value={select}
-            onChange={handleChange}
-            label='Aspect'
-          >
-            <MenuItem value=''>
-              <em>None</em>
-            </MenuItem>
-            <MenuItem value={10}>Ten</MenuItem>
-            <MenuItem value={20}>Twenty</MenuItem>
-            <MenuItem value={30}>Thirty</MenuItem>
-          </Select>
-        </FormControl>
-
-        <FormControl
-          size='small'
-          variant='outlined'
-          className={classes.formControl}
-        >
-          <InputLabel id='demo-simple-select-outlined-label'>
-            Prescription
-          </InputLabel>
-          <Select
-            labelId='demo-simple-select-outlined-label'
-            id='demo-simple-select-outlined'
-            value={select}
-            onChange={handleChange}
-            label='Prescription'
-          >
-            <MenuItem value=''>
-              <em>None</em>
-            </MenuItem>
-            <MenuItem value={10}>Ten</MenuItem>
-            <MenuItem value={20}>Twenty</MenuItem>
-            <MenuItem value={30}>Thirty</MenuItem>
-          </Select>
-        </FormControl>
-
-        <FormControl
-          size='small'
-          variant='outlined'
-          className={classes.formControl}
-        >
-          <InputLabel id='demo-simple-select-outlined-label'>
-            Frequency
-          </InputLabel>
-          <Select
-            labelId='demo-simple-select-outlined-label'
-            id='demo-simple-select-outlined'
-            value={select}
-            onChange={handleChange}
-            label='Frequency'
-          >
-            <MenuItem value=''>
-              <em>None</em>
-            </MenuItem>
-            <MenuItem value={10}>Ten</MenuItem>
-            <MenuItem value={20}>Twenty</MenuItem>
-            <MenuItem value={30}>Thirty</MenuItem>
-          </Select>
-        </FormControl>
-
+      <div className={classes.formContainer}>
+        <div className={classes.dropdownContainer}>
+          <Dimension
+            dimension={dimension}
+            handleDimensionChange={handleDimensionChange}
+            aspect={aspect}
+          />
+          <Aspect
+            aspect={aspect}
+            handleAspectChange={handleAspectChange}
+            dimension={dimension}
+          />
+          <Prescription handlePrescriptionChange={handlePrescriptionChange} />
+          <Frequency
+            frequency={frequency}
+            handleFrequencyChange={handleFrequencyChange}
+          />
+        </div>
         <Button
           size='small'
           variant='contained'
