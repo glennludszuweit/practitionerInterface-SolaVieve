@@ -1,8 +1,8 @@
 import ClientOverview from './ClientOverview/ClientOverview';
-import ClientInfoOverview from './ClientInfo/Overview/ClientInfoOverview';
-import ClientHealthTrackOverview from './ClientHealtTrack/Overview/ClientHealthTrackOverview';
-import ClientLifestylePrescOverview from './ClientLifestylePresc/Overview/ClientLifestylePrescOverview';
-import ClientProgressNotesOverview from './ClientProgressNotes/Overview/ClientProgressNotesOverview';
+import ClientInfoOverview from './ClientInfo/ClientInfoOverview/ClientInfoOverview';
+import ClientHealthTrackOverview from './ClientHealthTrack/ClientHealthTrackOverview/ClientHealthTrackOverview';
+import ClientLifestylePrescOverview from './ClientLifestylePresc/ClientLifestylePrescOverview/ClientLifestylePrescOverview';
+import ClientProgressNotesOverview from './ClientProgressNotes/ClientProgressNotesOverview/ClientProgressNotesOverview';
 import { Grid, IconButton } from '@material-ui/core';
 import { useStyles } from './styles';
 import PrintIcon from '@material-ui/icons/Print';
