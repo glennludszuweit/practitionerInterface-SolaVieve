@@ -33,10 +33,10 @@ function ClientInfoOverview() {
             <Link to='/client/info/lifestyle-habits'>Lifestyle and habits</Link>
           </ListItem>
           <ListItem button>
-            <Link to='/client/info/allergies'>Test results</Link>
+            <Link to='/client/info/allergies'>Allergies</Link>
           </ListItem>
           <ListItem button>
-            <Link to='/client/info/test-results'>Allergies</Link>
+            <Link to='/client/info/test-results'>Test results</Link>
           </ListItem>
         </List>
       </div>
