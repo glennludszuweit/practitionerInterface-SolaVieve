@@ -1,5 +1,6 @@
 import { useStyles } from './styles';
 import { Button, Divider, InputBase, Paper } from '@material-ui/core';
+import { Link } from 'react-router-dom';
 
 function ClientProgressNotesOverview() {
   const classes = useStyles();
@@ -10,7 +11,7 @@ function ClientProgressNotesOverview() {
         <div>Progress notes</div>
         <div>
           <Button size='small' variant='outlined' color='primary'>
-            history
+            <Link to='/client/progress-notes'>history</Link>
           </Button>
         </div>
       </div>
