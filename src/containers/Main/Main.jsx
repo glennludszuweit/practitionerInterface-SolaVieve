@@ -8,6 +8,8 @@ import Home from '../../components/Home/Home';
 import Payment from '../../components/Payment/Payment';
 import { useStyles } from './styles';
 import ClientInfo from '../../components/Client/ClientInfo/ClientInfo';
+import ClientProgressNotes from '../../components/Client/ClientProgressNotes/ClientProgressNotes';
+import ClientLifestylePresc from '../../components/Client/ClientLifestylePresc/ClientLifestylePresc';
 
 function Main({ open }) {
   const classes = useStyles();
@@ -25,6 +27,11 @@ function Main({ open }) {
         <Route path='/community' component={Community} />
         <Route path='/payment' component={Payment} />
         <Route path='/client/info' component={ClientInfo} />
+        <Route path='/client/progress-notes' component={ClientProgressNotes} />
+        <Route
+          path='/client/lifestyle-presc'
+          component={ClientLifestylePresc}
+        />
         <Route path='/client' component={Client} />
         <Route exact path='/' component={Home} />
         <Redirect to='/' />

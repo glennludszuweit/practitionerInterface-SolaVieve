@@ -5,6 +5,7 @@ import Dimension from './Dimension/Dimension';
 import Aspect from './Aspect/Aspect';
 import Prescription from './Prescription/Prescription';
 import Frequency from './Frequency/Frequency';
+import { Link } from 'react-router-dom';
 
 function ClientLifestylePresc() {
   const classes = useStyles();
@@ -35,7 +36,7 @@ function ClientLifestylePresc() {
         <div>Lifestyle prescriptions</div>
         <div>
           <Button size='small' variant='outlined' color='primary'>
-            history
+            <Link to='/client/lifestyle-presc'>history</Link>
           </Button>
         </div>
       </div>
