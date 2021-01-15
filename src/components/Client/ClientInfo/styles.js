@@ -32,8 +32,8 @@ export const useStyles = makeStyles((theme) => ({
     border: '1px solid #e8e8e8',
   },
   tabsContent: {
-    height: 800,
-    overflowY: 'scroll',
+    minHeight: 900,
     margin: '5px 0',
+    paddingBottom: 20,
   },
 }));

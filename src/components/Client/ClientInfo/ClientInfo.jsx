@@ -2,6 +2,7 @@ import { Button, IconButton, Paper, Tab, Tabs } from '@material-ui/core';
 import { useStyles } from './styles';
 import ArrowBackOutlinedIcon from '@material-ui/icons/ArrowBackOutlined';
 import { Link, Route, Switch } from 'react-router-dom';
+import PersonalInfo from './PersonalInfo/PersonalInfo';
 
 function ClientInfo() {
   const classes = useStyles();
@@ -27,16 +28,6 @@ function ClientInfo() {
       <Paper variant='outlined' className={classes.paper}>
         <div className={classes.header}>
           <h2>Information of client</h2>
-          <div>
-            <Button
-              className={classes.editButton}
-              size='small'
-              variant='contained'
-              color='primary'
-            >
-              edit
-            </Button>
-          </div>
         </div>
         <div className={classes.tabsRoot}>
           <Route
@@ -94,7 +85,7 @@ function ClientInfo() {
                 </Tabs>
                 <Switch>
                   <div className={classes.tabsContent}>
-                    <Route path={allTabs[0]} render={() => <div>hello</div>} />
+                    <Route path={allTabs[0]} render={() => <PersonalInfo />} />
                     <Route
                       path={allTabs[1]}
                       render={() => <div>Medical background</div>}
