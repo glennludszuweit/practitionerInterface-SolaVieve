@@ -13,7 +13,7 @@ import {
 } from '@material-ui/core';
 import { useStyles } from './styles';
 
-function PersonalInfoEdit() {
+function MedicalBackgroundEdit() {
   const classes = useStyles();
 
   return (
@@ -326,4 +326,4 @@ function PersonalInfoEdit() {
   );
 }
 
-export default PersonalInfoEdit;
+export default MedicalBackgroundEdit;
