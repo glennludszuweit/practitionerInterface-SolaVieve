@@ -3,6 +3,7 @@ import { useStyles } from './styles';
 import ArrowBackOutlinedIcon from '@material-ui/icons/ArrowBackOutlined';
 import { Link, Route, Switch } from 'react-router-dom';
 import PersonalInfo from './PersonalInfo/PersonalInfo';
+import MedicalBackground from './MedicalBackground/MedicalBackground';
 
 function ClientInfo() {
   const classes = useStyles();
@@ -88,7 +89,11 @@ function ClientInfo() {
                     <Route path={allTabs[0]} render={() => <PersonalInfo />} />
                     <Route
                       path={allTabs[1]}
-                      render={() => <div>Medical background</div>}
+                      render={() => (
+                        <div>
+                          <MedicalBackground />
+                        </div>
+                      )}
                     />
                     <Route
                       path={allTabs[2]}
